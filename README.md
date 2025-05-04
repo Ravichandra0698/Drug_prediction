@@ -1,62 +1,90 @@
-# 💊 Drug Prediction using Machine Learning
+# 💊 Drug Review Analysis Project
 
-[![Made with Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter)](https://jupyter.org)
-
-> A machine learning project to predict the most suitable drug for a patient based on their health attributes.
+This project analyzes patient reviews on drugs to evaluate their effectiveness, ease of use, satisfaction, and more. It uses regression models, classification algorithms, and visualizations to draw insights and predict drug types and recommendations for medical conditions.
 
 ---
 
-## 🧠 Project Overview
+## 📁 Dataset
 
-This notebook presents an end-to-end ML pipeline:
-- 📥 Data loading & exploration
-- 🔧 Feature encoding & preprocessing
-- 📊 Model training & evaluation
-- 📉 Accuracy comparison & visualization
-- 🧾 Drug recommendation prediction
+The dataset `Drug.csv` includes anonymized reviews with the following key columns:
 
----
-
-## 📂 Dataset Features
-
-| Feature      | Description                                      |
-|--------------|--------------------------------------------------|
-| `Age`        | Age of the patient                               |
-| `Sex`        | Gender of the patient (`M`/`F`)                  |
-| `BP`         | Blood Pressure (`LOW`, `NORMAL`, `HIGH`)         |
-| `Cholesterol`| Cholesterol level (`NORMAL`, `HIGH`)             |
-| `Na_to_K`    | Sodium-to-potassium ratio                        |
-| `Drug`       | Target class: `DrugY`, `DrugC`, `DrugX`, `DrugA`, `DrugB` |
+- `Drug`: Name of the drug  
+- `Condition`: Condition the drug is used for  
+- `Reviews`: Number of reviews  
+- `Effective`, `EaseOfUse`, `Satisfaction`: Ratings from 1 to 5  
+- `Information`: Summary of user feedback  
+- `Type`: Drug classification (Generic, Brand)
 
 ---
 
-## 🔍 Technologies Used
+## 📊 Key Features
 
-- 🐍 Python 3.8+
-- 📘 Pandas, NumPy
-- 🧪 Scikit-learn
-- 📊 Matplotlib, Seaborn
-- 📓 Jupyter Notebook
-
----
-
-## 🤖 ML Models Used
-
-| Model                  | Type            |
-|------------------------|-----------------|
-| Decision Tree          | Classification  |
-| K-Nearest Neighbors    | Classification  |
-| Support Vector Machine | Classification  |
-| Logistic Regression    | Classification  |
-| Naive Bayes            | Classification  |
+- **Exploratory Data Analysis**  
+  - Histograms, scatter plots, pair plots, and correlation heatmaps  
+- **Regression Models**  
+  - Linear Regression and OLS Regression  
+- **Classification**  
+  - Random Forest to predict `Type` based on usage ratings  
+- **Drug Recommendation System**  
+  - Suggests top-rated drug for each condition  
+- **Condition-Based Prediction**  
+  - Predicts the drug type and recommendation for a new medical condition input
 
 ---
 
-## 📈 Model Evaluation
+## 🔧 Libraries Used
 
-- Accuracy metrics were used to evaluate performance.
-- Comparative visualization via bar plots to easily identify the best-performing model.
+- `pandas`, `numpy`  
+- `matplotlib`, `seaborn`  
+- `sklearn`  
+- `statsmodels`
 
 ---
+
+## 🚀 Running the Project
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/<your-username>/drug-review-analysis.git
+cd drug-review-analysis
+2. Install dependencies:
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Place the dataset:
+Ensure Drug.csv is in the root directory.
+
+4. Run the script:
+bash
+Copy
+Edit
+python main.py
+📌 Example Output
+Top drug recommendations for each condition
+
+Regression model output:
+
+Intercept, slope, and MSE
+
+Classification model:
+
+Confusion matrix with accuracy
+
+Prediction:
+
+Given a condition like "Diabetes Type 2", output the predicted drug type and recommendation
+
+🧪 Sample Visualization
+📉 Scatter plot of Satisfaction vs. Effectiveness, colored by drug type
+
+🔥 Correlation heatmap with annotated coefficients
+
+🧮 Confusion matrix for model performance
+
+📃 License
+This project is licensed under the MIT License.
+
+👤 Author
+Ravichandra Lakkappa
+GitHub • LinkedIn
